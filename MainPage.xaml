@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="KanbanView_Project.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KanbanView_Project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:view="using:KanbanView_Project.Kanban.View" xmlns:view1="using:KanbanView_Project.Presentation.Tasks.View"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <SplitView x:Name="ZSplitView"
+            DisplayMode="Inline"
+            IsPaneOpen="True"
+            FlowDirection="LeftToRight"
+            PaneBackground="Transparent">
+        <SplitView.Pane>
+            <ListView x:Name="LeftPaneLV"
+                   Background="Blue">
+                <ListViewItem>first</ListViewItem>
+                <ListViewItem>second</ListViewItem>
+                <ListViewItem>third</ListViewItem>
+                <ListViewItem>fourth</ListViewItem>
+                <ListViewItem>fifth</ListViewItem>
+                <ListViewItem>six</ListViewItem>
+                <ListViewItem>seven</ListViewItem>
+                <ListViewItem>eight</ListViewItem>
+                <ListViewItem>nine</ListViewItem>
+                <ListViewItem>tenth</ListViewItem>
+                <ListViewItem>eleven</ListViewItem>
+                <ListViewItem>twelve</ListViewItem>
+                <ListViewItem>thirteen</ListViewItem>
+                <ListViewItem>fourteen</ListViewItem>
+                <ListViewItem>fifteen</ListViewItem>
+            </ListView>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Grid x:Name="DetailViewGrid" Margin="0" Padding="0 ">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid x:Name="TopGridPanel" Background="Plum">
+                    <TextBlock Tapped="TextBlock_Tapped" Text="Top View Grid" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+
+                <Grid Grid.Row="1" x:Name="MainGrid">
+                    <view1:TasksHomePage x:Name="TasksHomePage"/>
+                </Grid>
+            </Grid>
+        </SplitView.Content>
+    </SplitView>
+</Page>

@@ -1,0 +1,10 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:datamodel="using:KanbanView_Project.Kanban.DataModel">
+
+    <DataTemplate x:Name="DrapDropTemplate" x:Key="DrapDropTemplate">
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="80" Background="Red">
+            <Rectangle Height="80" Fill="Red"/>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>
